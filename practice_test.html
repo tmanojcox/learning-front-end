@@ -1,18 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        .li3:hover{
+           
+          
+            background-color: red;
+  
+        }
+
+        li:hover{
+            font-size:20px;
+            
+            
+  transition: 0.9s;
+        }
+    #counting{
+      text-emphasis-color: white;
+      font-size: 100px;
+     
+
+    }
+       
+      
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <h1>Practice test 1</h1>
+    <h1 style="background-color: gray;" >Practice test 1</h1>
     
-        <ol type="A">
-            <li>I'm a good boy.</li>
-            <li><b>You'r a good boy</b></li>
-            <li><i>He's a good boy</i></li>
+        <ol type="A", >
+            <li class="li1">I'm a good boy.</li>
+            <li class="li2" style="color: red;"><b>You'r a good boy</b></li>
+            <li class="li3" style="color: green;"><i>He's a good boy</i></li>
           </ol>
 
-</body>
+          <div >            
+            <!-- adding button and heading to show the digits -->
+            <!--increment() and decrement() functions on button click-->
+                <button id="btn1" onclick="increment()">+</button>
+                <h2 id="counting" ></h2>
+
+            <button id="btn2" onclick="decrement()">-</button>           
+            </div>
+<script>
+ 
+ 
+ let data = 0;
+  
+let btn1= document.querySelector("#btn1");
+let btn2= document.querySelector("#btn2");
+let content= document.querySelector("#counting");
+btn1.addEventListener("click",() => content.style.color=getRandomColor());
+btn2.addEventListener("click",() => content.style.color=getRandomColor());
+
+console.log();
+
+  
+ //creation of increment function
+ function increment() {
+     data = data + 1;
+     document.getElementById("counting").innerText = data;
+     document.getElementById("counting").style.background =getRandomColor();
+    
+
+ }
+ //creation of decrement function
+ function decrement() {
+     data = data - 1;
+     document.getElementById("counting").innerText = data;
+     document.getElementById("counting").style.background =getRandomColor();
+     
+ }
+
+
+ function getRandomColor(){
+     var letters= "1234567890abcdef";
+     
+     var color="#";
+     for(let i=0;i<6;i++){
+         color +=letters[Math.floor(Math.random()*16)];
+    }
+    
+    return color;
+}
+
+
+
+
+
+
+ 
+
+</script>
+
+
+        </body>
+
 </html>
