@@ -79,7 +79,7 @@ ul li::before{
     background-position: centre;
     left: 33%;
 }
-ul li.checked{
+ul li.checked {
     color: #555;
     text-decoration: line-through;
 
@@ -88,7 +88,8 @@ ul li.checked::before{
    background-image: url(To-Do-Img/images/checked.png);
    
 }
-ul li .listcontainer  span{
+ul li .listcontainer   span{
+   
     position: absolute;
     right: 80%;
     top: 5px;
@@ -97,11 +98,8 @@ ul li .listcontainer  span{
     font-size: 20px;
     color: #a60e0e;
     line-height: 40px;
-    border-radius: 50%;
-    text-align: center;
-
 }
-ul li span:hover{
+    ul li span:hover{
     background: red
     
     

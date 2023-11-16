@@ -20,9 +20,9 @@
         <button onclick="addTask()" >Add</button>
       </div>
       <ul id="list-container" class="flex justify-between">
-        <!--- <li class="checked" >Item 1</li>
+        <li class="checked" >Item 1</li>
             <li>Item 2</li>
-            <li>Item 3</li> --->
+            <li>Item 3</li> 
       </ul>
     </div>
   </div>
@@ -40,9 +40,9 @@
         let li = document.createElement("li");
         li.innerHTML = inputbox.value;
         listcontainer.appendChild(li);
-        // let span = document.createElement("span");
-        // span.innerHTML = "\u00d7";
-        // li.appendChild(span);
+        let span = document.createElement("span");
+        span.innerHTML = "\u00d7";
+        li.appendChild(span);
 
 
       }
@@ -50,7 +50,10 @@
       inputbox.value = "";
     }
     listcontainer.addEventListener("click", function(e) {
-      if (e.target.tagname === "LI") {
+    
+      console.log(e.target.tagName);
+      if (e.target.tagName === "LI") {
+       
         e.target.classList.toggle("checked");
       }
       else if (e.target.tagName === "SPAN") {
